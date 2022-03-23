@@ -5,9 +5,11 @@ from app.routers import post, user, auth, vote
 from app.config import settings
 from fastapi.middleware.cors import CORSMiddleware
 
+from fastapi.testclient import TestClient
 
 # # при каждом запуске будут отслеживатся все изменения в models и автоматически запускать изменения в бд
 # # но тк у нас есть  alembic,то мы закоментируем это
+
 # models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
